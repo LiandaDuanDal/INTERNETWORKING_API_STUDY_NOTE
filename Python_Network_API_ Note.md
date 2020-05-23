@@ -52,6 +52,42 @@ Lianda Duan
 - 测试代码用到的网站 Deck of  Cards------官方网站：https://deckofcardsapi.com/
 - 增加JSON结果的可读性 https://codebeautify.org/jsonviewer
 
+# 一些重要的操作
+
+从本地向服务器发送get请求，并得到反馈。
+
+```python
+import requests
+r = requests.get('https://api.github.com/events')
+r.text
+```
+
+如果返回的是JSON报文
+
+```
+>>> import requests
+
+>>> r = requests.get('https://api.github.com/events')
+>>> r.json()
+```
+
+如果这个URL返回的是图片
+
+```
+from PIL import Image
+from io import BytesIO
+
+i = Image.open(BytesIO(r.content))
+```
+
+
+
+
+
+
+
+
+
 # 赌徒的基本素养： Deck of Cards API**
 
 
@@ -338,20 +374,7 @@ This lab teaches a number of things about REST APIS:
 - Understand JSON and XML Payloads.
 - Practical examples using REST APIs.
 
-## REST API status CODE
 
-| Status Code | Status Message        | Meaning                                |
-| :---------- | :-------------------- | :------------------------------------- |
-| 200         | OK                    | All looks good                         |
-| 201         | Created               | New resource created                   |
-| 400         | Bad Request           | Request was invalid                    |
-| 401         | Unauthorized          | Authentication missing or incorrect    |
-| 403         | Forbidden             | Request was understood but not allowed |
-| 404         | Not Found             | Resource not found                     |
-| 500         | Internal Server Error | Something wrong with the server        |
-| 503         | Service Unavailable   | Server is unable to complete request   |
-
-注意如果是500打头的出了错误一定是服务器那边的问题
 
 
 
@@ -453,6 +476,12 @@ url = "https://fqdn-Or-IPofController/api/v1/api_itself"
 response = requests.delete(url,verify=False)
 ```
 
+## 未完待续。。。。。。。。。
+
+
+
+
+
 
 
 # 实战笔记
@@ -475,9 +504,42 @@ from __future__ import print_function
 
 所以以后看到这个句子的时候，不用害怕，只是把下一个新版本的特性导入到当前版本！
 
+## REST API status CODE
+
+| Status Code | Status Message        | Meaning                                |
+| :---------- | :-------------------- | :------------------------------------- |
+| 200         | OK                    | All looks good                         |
+| 201         | Created               | New resource created                   |
+| 400         | Bad Request           | Request was invalid                    |
+| 401         | Unauthorized          | Authentication missing or incorrect    |
+| 403         | Forbidden             | Request was understood but not allowed |
+| 404         | Not Found             | Resource not found                     |
+| 500         | Internal Server Error | Something wrong with the server        |
+| 503         | Service Unavailable   | Server is unable to complete request   |
+
+注意如果是500打头的出了错误一定是服务器那边的问题
+
+## Python - 两个列表(list)组成字典(dict)
+
+```python
+# -*- coding: utf-8 -*-
 
 
-## 未完待续
+keys = ['a', 'b', 'c']
+values = [1, 2, 3]
+dictionary = dict(zip(keys, values))
+print dictionary
+
+"""
+输出:
+{'a': 1, 'c': 3, 'b': 2}
+"""
+
+```
+
+
+
+## 未完待续。。。。。。。。。。。。
 
 
 
@@ -496,3 +558,7 @@ from __future__ import print_function
 [3] https://developer.cisco.com/learning/labs/what-are-rest-apis/step/1
 
 [4] https://zhuanlan.zhihu.com/p/28641474
+
+[5] https://blog.csdn.net/caroline_wendy/article/details/47060459
+
+[6] https://requests.readthedocs.io/en/master/user/quickstart/
