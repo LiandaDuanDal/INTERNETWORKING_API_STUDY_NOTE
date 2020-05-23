@@ -1,6 +1,20 @@
 [TOC]
 
+# 要求
 
+# Poker-with-API
+
+
+Implement the code given in http://thinkpython2.com/code (Card.py and PokerHand.py) using https://deckofcardsapi.com/.
+
+### Todos
+
+ - Download the requried files or create them in this repo. 
+ - Comment on the design in this readmefile. 
+ - Rewrite the basic classes in Card.py using https://deckofcardsapi.com/
+ - Modifiy PokerHand.py to accommodate the changes you made
+ -  https://greenteapress.com/thinkpython2/html/thinkpython2019.html has two exercise 2 and 3 for PokerHand.py, 
+ - Can you make a playable game of poker with a automated dealer and few players?
 
 # Python API Note-INWK
 
@@ -12,14 +26,14 @@ Lianda Duan
 
 
 
-# 几个重要的连接
+# **几个重要的连接**
 
 
 
 - 测试代码用到的网站 Deck of  Cards------官方网站：https://deckofcardsapi.com/
 - 增加JSON结果的可读性 https://codebeautify.org/jsonviewer
 
-# Deck of Cards API
+# **Deck of Cards API**
 
 
 
@@ -81,7 +95,7 @@ Don't throw away a deck when all you want to do is shuffle. Include the deck_id 
 https://deckofcardsapi.com/api/deck/<<deck_id>>/shuffle/
 ```
 
-和之前的命令一样，吧http请求放进浏览器里，会得到如下的输出:
+和之前的命令一样，把http请求放进浏览器里，会得到如下的输出:
 
 ```jade
 {
