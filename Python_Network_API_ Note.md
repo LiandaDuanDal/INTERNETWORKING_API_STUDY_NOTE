@@ -16,6 +16,15 @@ Implement the code given in http://thinkpython2.com/code (Card.py and PokerHand.
  -  https://greenteapress.com/thinkpython2/html/thinkpython2019.html has two exercise 2 and 3 for PokerHand.py, 
  - Can you make a playable game of poker with a automated dealer and few players?
 
+## Prerequisites
+
+- Familiarity with REST APIs and JSON.
+- Basic proficiency with Python or a similar high-level programming language.
+
+To study these topics, complete the [Coding 101: REST API Basics Lab](https://learninglabs.cisco.com/labs/coding-101-rest-basics-ga/step/1).
+
+You will make API calls to an APIC-EM controller. By default, these labs use the [Cisco DevNet Sandbox’s](https://developer.cisco.com/site/devnet/sandbox/) APIC-EM controller at https://sandboxapicem.cisco.com/.
+
 # Python API Note-INWK
 
 Lianda Duan
@@ -33,7 +42,7 @@ Lianda Duan
 - 测试代码用到的网站 Deck of  Cards------官方网站：https://deckofcardsapi.com/
 - 增加JSON结果的可读性 https://codebeautify.org/jsonviewer
 
-# **Deck of Cards API**
+# 赌徒的基本素养： Deck of Cards API**
 
 
 
@@ -230,7 +239,7 @@ https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/list/
 
 Note: This will not work with multiple decks.
 
-Response：
+Reponse:
 
 ```jade
 {
@@ -278,7 +287,9 @@ Specify the cards that you want to draw from the pile. The default is to just dr
 
 指定要从堆中抽出的牌。 默认设置是仅从堆的顶部抽出（它是一个堆栈）。 或将底部参数添加到要从底部绘制的URL。
 
-### Response:
+
+
+Reponse:
 
 ```web-idl
 {
@@ -303,13 +314,75 @@ Specify the cards that you want to draw from the pile. The default is to just dr
 
 
 
+# APIC-EM APIs with Python
+
+## 基本操作
 
 
 
+- **POST** creates data.
+- **GET** reads (retrieves) data.
+- **PUT** updates data.
+- **DELETE** deletes data.
 
 
 
+#### GET
 
+To get data, a Python script issues a GET request, such as:
+
+```python
+import requests
+url = "https://fqdn-Or-IPofController/api/v1/api_itself"
+response = requests.get(url,verify=False)
+# verify=False means not verifying the SSL certificate
+```
+
+
+
+#### POST
+
+To create data, a Python script issues a POST request, such as:
+
+```python
+import requests
+import json
+
+json_obj = {
+"key":"value"
+}
+url = "https://fqdn-Or-IPofController/api/v1/api_itself"
+# need to specify content type -json- for POST request #
+headers = {'content-type': 'application/json'}
+response = requests.post(url, json.dumps(json_obj), headers=headers,verify=False)
+```
+
+#### PUT
+
+To modify data, a Python script issues a PUT request, such as:
+
+```python
+import requests
+import json
+
+json_obj = {
+"key":"value_to_change"
+}
+url = "https://fqdn-Or-IPofController/api/v1/api_itself"
+# need to specify content type -json- for PUT request #
+headers = {'content-type': 'application/json'}
+response = requests.put(url, json.dumps(json_obj), headers=headers,verify=False)
+```
+
+#### DELETE
+
+To delete data, a Python request issues a DELETE request, such as:
+
+```python
+import requests
+url = "https://fqdn-Or-IPofController/api/v1/api_itself"
+response = requests.delete(url,verify=False)
+```
 
 
 
