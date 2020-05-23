@@ -216,7 +216,7 @@ https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/list/
 
 Note: This will not work with multiple decks.
 
-### Response:
+Response：
 
 ```jade
 {
@@ -248,7 +248,7 @@ Note: This will not work with multiple decks.
 }
 ```
 
-## Drawing from Piles
+## 画出桩中的牌Drawing from Piles
 
 
 
