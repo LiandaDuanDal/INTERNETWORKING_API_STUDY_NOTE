@@ -396,6 +396,26 @@ response = requests.delete(url,verify=False)
 
 
 
+# 实战笔记
+
+## from __future__ import print_function用法
+
+阅读代码的时候会看到下面语句：
+
+```python
+from __future__ import print_function
+```
+
+在python2.x的环境是使用下面语句，则第二句语法检查通过，第三句语法检查失败
+
+```python3
+1 from __future__ import print_function
+2 print('you are good')
+3 print 'you are good'
+```
+
+所以以后看到这个句子的时候，不用害怕，只是把下一个新版本的特性导入到当前版本！
+
 
 
 
@@ -416,3 +436,4 @@ response = requests.delete(url,verify=False)
 
 [3] https://developer.cisco.com/learning/labs/what-are-rest-apis/step/1
 
+[4] https://zhuanlan.zhihu.com/p/28641474
