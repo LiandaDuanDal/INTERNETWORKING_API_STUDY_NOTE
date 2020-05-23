@@ -322,6 +322,65 @@ Reponse:
 }
 ```
 
+#  REST & API
+
+- ***REST*** stands for **RE**presentational **S**tate **T**ransfer
+
+- An ***API*** is an **A**pplication **P**rogramming **I**nterface
+
+## Objectives
+
+This lab teaches a number of things about REST APIS:
+
+- Understand REST API concepts.
+- Learn the basics of consuming REST APIs.
+- Learn the standard verbs for REST APIs.
+- Understand JSON and XML Payloads.
+- Practical examples using REST APIs.
+
+## REST API status CODE
+
+| Status Code | Status Message        | Meaning                                |
+| :---------- | :-------------------- | :------------------------------------- |
+| 200         | OK                    | All looks good                         |
+| 201         | Created               | New resource created                   |
+| 400         | Bad Request           | Request was invalid                    |
+| 401         | Unauthorized          | Authentication missing or incorrect    |
+| 403         | Forbidden             | Request was understood but not allowed |
+| 404         | Not Found             | Resource not found                     |
+| 500         | Internal Server Error | Something wrong with the server        |
+| 503         | Service Unavailable   | Server is unable to complete request   |
+
+注意如果是500打头的出了错误一定是服务器那边的问题
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # APIC-EM APIs with Python
@@ -418,7 +477,7 @@ from __future__ import print_function
 
 
 
-
+## 未完待续
 
 
 
