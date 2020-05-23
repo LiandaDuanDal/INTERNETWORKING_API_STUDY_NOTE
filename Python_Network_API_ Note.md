@@ -2,6 +2,16 @@
 
 # 要求
 
+**首先为何要打牌？**
+
+我们原本需要学会做到这三步，以用硬件虚拟化技术 控制网络设备。
+
+这里面的第一步，要求熟悉网络中的API的使用方法，于是引入了这个打牌的游戏作为homework，不断请求并从服务器获取结果，来理解网络中API的使用方法，为Step 2，Step 3打基础、
+
+1. [Step 1: Learn the basics of the APIC-EM REST API](https://developer.cisco.com/learning/tracks/devnet-beginner/network-programmability/apic-em-basic/step/1)
+2. [Step 2: Generate and use a new service ticket](https://developer.cisco.com/learning/tracks/devnet-beginner/network-programmability/apic-em-basic/step/2)
+3. [Step 3: Use network device-related APIs](https://developer.cisco.com/learning/tracks/devnet-beginner/network-programmability/apic-em-basic/step/3)
+
 # Poker-with-API
 
 
