@@ -411,3 +411,8 @@ response = requests.delete(url,verify=False)
 # References
 
 [1] https://deckofcardsapi.com/ 官方说明
+
+[2] https://developer.cisco.com/learning/tracks/devnet-beginner/network-programmability/apic-em-basic/step/1
+
+[3] https://developer.cisco.com/learning/labs/what-are-rest-apis/step/1
+
