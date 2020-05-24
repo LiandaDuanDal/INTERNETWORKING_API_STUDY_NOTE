@@ -110,7 +110,7 @@ https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1
 {"success": true, "deck_id": "0y05kmosn3gn", "remaining": 52, "shuffled": true}
 ```
 
-## 画出这张牌 Draw a Card：
+## 抓一张牌 Draw a Card：
 
 The count variable defines how many cards to draw from the deck. Be sure to replace deck_id with a valid deck_id. We use the deck_id as an identifier so we know who is playing with what deck. After two weeks, if no actions have been made on the deck then we throw it away.
 
@@ -539,6 +539,50 @@ print dictionary
 
 ```
 
+# 把一个图片放到网页上
+
+我们可以用[``](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img) 元素来把图片放到网页上。它是一个空元素（它不需要包含文本内容或闭合标签），最少只需要一个 `src` （一般读作其全称 *source）*来使其生效。`src` 属性包含了指向我们想要引入的图片的路径，可以是相对路径或绝对URL，就像 [``](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a) 元素的 `href` 属性一样。
+
+**注意：**在继续之前，你应该阅读[快速入门URL和路径](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#URLs与路径(path)快速入门)来复习一下相对和绝对URL。
+
+举个例子来看，如果你有一幅文件名为 `dinosaur.jpg` 的图片，且它与你的 HTML 页面存放在相同路径下，那么你可以这样嵌入它：
+
+```html
+<img src="dinosaur.jpg">
+```
+
+如果这张图片存储在和 HTML 页面同路径的 `images` 文件夹下（这也是Google推荐的做法，利于[SEO](https://developer.mozilla.org/zh-CN/docs/Glossary/SEO)/索引），那么你可以采用如下形式：
+
+```html
+<img src="images/dinosaur.jpg">
+```
+
+以此类推。
+
+**注意：**搜索引擎也读取图像的文件名并把它们计入SEO。因此你应该给你的图片取一个描述性的文件名：`dinosaur.jpg` 比 `img835.png `要好。
+
+你也可以像下面这样使用绝对路径：
+
+```html
+<img src="https://www.example.com/images/dinosaur.jpg">
+```
+
+但是这种方式是不被推荐的，这样做只会使浏览器做更多的工作，例如重新通过 DNS 再去寻找 IP 地址。通常我们都会把图片和 HTML 放在同一个服务器上。备选文本
+
+
+
+下一个我们讨论的属性是 `alt` ，它的值应该是对图片的文字描述，用于在图片无法显示或不能被看到的情况。例如，上面的例子可以做如下改进：
+
+```html
+<img src="images/dinosaur.jpg"
+     alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth">
+```
+
+测试`alt` 属性最简单的方式就是故意拼错图片文件名，这样浏览器就无法找到该图片从而显示备选的文本。如果我们将上例的图片文件名改为 `dinosooooor.jpg`，浏览器就不能显示图片。
+
+
+
 
 
 ## 未完待续。。。。。。。。。。。。
@@ -564,3 +608,5 @@ print dictionary
 [5] https://blog.csdn.net/caroline_wendy/article/details/47060459
 
 [6] https://requests.readthedocs.io/en/master/user/quickstart/
+
+[7] https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
