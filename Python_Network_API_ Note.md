@@ -84,12 +84,6 @@ i = Image.open(BytesIO(r.content))
 
 
 
-
-
-
-
-
-
 # 赌徒的基本素养： Deck of Cards API**
 
 
@@ -378,36 +372,6 @@ This lab teaches a number of things about REST APIS:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # APIC-EM APIs with Python
 
 ## 基本操作
@@ -581,17 +545,7 @@ print dictionary
 
 测试`alt` 属性最简单的方式就是故意拼错图片文件名，这样浏览器就无法找到该图片从而显示备选的文本。如果我们将上例的图片文件名改为 `dinosooooor.jpg`，浏览器就不能显示图片。
 
-
-
-
-
 ## 未完待续。。。。。。。。。。。。
-
-
-
-
-
-
 
 
 
