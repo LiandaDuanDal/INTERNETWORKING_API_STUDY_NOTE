@@ -17,7 +17,7 @@
 
 Implement the code given in http://thinkpython2.com/code (Card.py and PokerHand.py) using https://deckofcardsapi.com/.
 
-### Todos
+## Todos
 
  - Download the requried files or create them in this repo. 
  - Comment on the design in this readmefile. 
@@ -64,16 +64,18 @@ r.text
 
 如果返回的是JSON报文
 
-```
+```python
 >>> import requests
 
 >>> r = requests.get('https://api.github.com/events')
 >>> r.json()
+
+这个时候拿到的是一个字典
 ```
 
 如果这个URL返回的是图片
 
-```
+```python
 from PIL import Image
 from io import BytesIO
 
